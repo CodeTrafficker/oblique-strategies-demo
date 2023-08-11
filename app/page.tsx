@@ -43,7 +43,7 @@ export default function obliqueStrategies()  {
   }
 
   // run on load, then on clicks:
-  pullObliqueStrategy();
+  // pullObliqueStrategy();
   
   return (
     <div className="">
