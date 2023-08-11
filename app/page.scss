@@ -1,0 +1,14 @@
+// page.scss
+
+button {
+  background: red;
+  padding: 3rem;
+  font-size: 2rem;
+
+  @apply font-bold py-2 px-4 rounded;
+  transition: all 0.5s ease-out;
+
+  &:hover {
+    @apply bg-white hover:bg-gray-100 text-gray-800
+  }
+}
