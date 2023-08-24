@@ -39,9 +39,12 @@ export default function obliqueStrategies()  {
 // flex flex-col
 
   return (
-    <div className=" h-screen v-screen text-center">
+    <>
+    <h1 className="text-center">OBLIQUE STRATEGIES</h1>
+    <div className="app-container mx-auto px-5 text-center">
       <p id="theMessage">{theMessage}</p>
-      <button className="primary absolute bottom-20 md:bottom-auto md:relative" onClick={pullObliqueStrategy}>New Strategy, please</button>
+      <button className="primary primary bottom-20 absolute" onClick={pullObliqueStrategy}>New Strategy, please</button>
     </div>
+    </>
   );
 }

@@ -1,5 +1,16 @@
 // page.scss
+@import './app/variables';
 
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 80vw;
+  height: 80vh;
+  margin-top: 10vh;
+  background: $bg-dark;
+  @apply rounded-xl;
+}
 
 #theMessage {
   padding: 10vh 10vw;
@@ -7,14 +18,17 @@
 }
 
 button {
-  background: red;
+  background: $button-bg;
   padding: 3rem;
   font-size: 1.75rem;
+  font-color: $button-text;
+
+  align-self: center;
 
   @apply font-bold py-2 px-4 rounded;
-  transition: all 0.5s ease-out;
+  transition: all 0.25s ease-out;
 
   &:hover {
-    @apply bg-white hover:bg-gray-100 text-gray-800
+    background: $button-hover;
   }
 }
