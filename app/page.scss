@@ -1,13 +1,20 @@
 // page.scss
 @import './app/variables';
 
+h1 {
+  color: $text-title;
+  font-size: 10vh;
+  line-height: 8vh;
+  font-weight: 600;
+}
+
 .app-container {
   display: flex;
   flex-direction: column;
   justify-content: start;
   width: 80vw;
   height: 80vh;
-  margin-top: 10vh;
+  // margin-top: 10vh;
   background: $bg-dark;
   @apply rounded-xl;
 }
