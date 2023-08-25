@@ -36,14 +36,12 @@ export default function obliqueStrategies()  {
     setMessage(prevMsg => thisRandomStrategy);
   }
 
-// flex flex-col
-
   return (
     <>
     <h1 className="text-center">OBLIQUE STRATEGIES</h1>
     <div className="app-container mx-auto px-5 text-center">
       <p id="theMessage">{theMessage}</p>
-      <button className="primary primary bottom-20 absolute" onClick={pullObliqueStrategy}>New Strategy, please</button>
+      <button className="primary absolute bottom-10" onClick={pullObliqueStrategy}>New Strategy, please</button>
     </div>
     </>
   );
