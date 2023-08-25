@@ -39,7 +39,7 @@ export default function obliqueStrategies()  {
     <h1 className="text-center">OBLIQUE STRATEGIES</h1>
     <div className="app-container   mx-auto px-5 text-center">
       <p className="theMessage">{theMessage}</p>
-      <button className="primary absolute bottom-10" onClick={pullObliqueStrategy}>New Strategy, please</button>
+      <button className="primary absolute bottom-10" onClick={pullObliqueStrategy}>Draw a card</button>
     </div>
     </>
   );
