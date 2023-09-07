@@ -57,25 +57,22 @@ export default function obliqueStrategies()  {
     console.log('randomNum: ', randomNum );
     console.log('thisRandomStrategy: ', thisRandomStrategy );
 
-    // setTimeout(() => { 
     paletteSwitcher(randomNum);
     setMessage(prevMsg => thisRandomStrategy);
-    //}, 500);
-
   }
 
   return (
-    <>
-    <h1 className="text-center">OBLIQUE STRATEGIES</h1>
-    <div className="app-container mx-auto px-5 text-center">
-      <p id="theMessage" className="">{theMessage} {paletteChoice}</p>
-      <button className="primary absolute bottom-10" onClick={pullObliqueStrategy}>Draw a card</button>
-    </div> 
-    <p className="info-credits mx-auto text-center py-3 text-sm italic">
-      Read more about the history of Brian Eno's Oblique Strategies card deck here: <a href="https://en.wikipedia.org/wiki/Oblique_Strategies">wikipedia.org/wiki/Oblique_Strategies</a>
-      <br />
-      Github repo <a href="https://github.com/CodeTrafficker/oblique-strategies-demo">here</a>.
-    </p>
-    </>
+    <div className={paletteChoice}>
+      <h1 className="text-center">OBLIQUE STRATEGIES</h1>
+      <div className="app-container mx-auto px-5 text-center">
+        <p id="theMessage" className="">{theMessage}</p>
+        <button className="primary absolute bottom-10" onClick={pullObliqueStrategy}>Draw a card</button>
+      </div> 
+      <p className="info-credits mx-auto text-center py-3 text-sm italic">
+        Read more about the history of Brian Eno's Oblique Strategies card deck here: <a href="https://en.wikipedia.org/wiki/Oblique_Strategies">wikipedia.org/wiki/Oblique_Strategies</a>
+        <br />
+        Github repo <a href="https://github.com/CodeTrafficker/oblique-strategies-demo">here</a>.
+      </p>
+    </div>
   );
 }

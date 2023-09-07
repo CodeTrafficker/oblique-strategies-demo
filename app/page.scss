@@ -2,16 +2,11 @@
 @import './app/variables';
 
 h1 {
-
   color: $text-title;
-
-  + .palette2 {
-    color: $text-title-2;
-  }
-  
   font-weight: 600;
   font-size: 6vh;
   line-height: 5vh;
+  transition: color .45s ease-out;
 }
 
 .app-container {
@@ -19,16 +14,18 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  background: $bg-dark;
+  // background: $bg-dark;
   @apply rounded-xl;
   height: 85vh;
+  transition: background-color .45s ease-out;
 }
 
 .app-container, .info-credits {
   width: 85vw; 
 }
 .info-credits {
-  color: $text-light-on-dark;
+  //color: $text-light-on-dark;
+  transition: color .45s ease-out;
   a {
     text-decoration: underline;
   }
@@ -39,27 +36,75 @@ h1 {
   font-size: 2.5rem;
 }
 
-// TODO: is this working correctly:
-.fadeUp {
-  opacity: 0;
-  transition: all;
-}
-
 button {
-  background: $button-bg;
+  // background: $button-bg;
   padding: 3rem;
   font-size: 1.75rem;
   font-color: $button-text;
-
   align-self: center;
-
   @apply font-bold py-2 px-4 rounded;
-  transition: all 0.45s ease-out;
-
+  transition: all 0.45s ease-out; // this will include background-color
   &:hover {
-    background: $button-hover;
+    // background: $button-hover;
   }
 }
+
+
+
+.palette1 {
+  h1 {
+    color: $text-title;
+  }
+  .app-container {
+    background: $bg-dark;
+  }
+  .info-credits {
+    color: $text-light-on-dark;
+  }
+  button {
+    background: $button-bg;
+    &:hover {
+      background: $button-hover;
+    }
+  }
+}
+
+.palette2 {
+  h1 {
+    color: $text-title-2;
+  }
+  .app-container {
+    background: $bg-dark-2;
+  }
+  .info-credits {
+    color: $text-light-on-dark-2;
+  }
+  button {
+    background: $button-bg-2;
+    &:hover {
+      background: $button-hover-2;
+    }
+  }
+}
+
+.palette3 {
+  h1 {
+    color: $text-title-3;
+  }
+  .app-container {
+    background: $bg-dark-3;
+  }
+  .info-credits {
+    color: $text-light-on-dark-3;
+  }
+  button {
+    background: $button-bg-3;
+    &:hover {
+      background: $button-hover-3;
+    }
+  }
+}
+
 
 // Responsive design adjustment for med-large screens (ie, not phones)
 // TODO: should be able to replace 'min-width: 640px' with 'sm' in tailwind
