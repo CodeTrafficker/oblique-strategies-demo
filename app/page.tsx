@@ -17,12 +17,35 @@ export default function obliqueStrategies()  {
   const [theMessage, setMessage] = useState();
   const strategiesJSON = require('../data/data.json');
   const jsonLength = strategiesJSON.length;
+  const [paletteChoice, setPaletteChoice] = useState();
 
   // Run once on page load to show an initial strategy message instead 
   // of empty space. Empty array [] because React:
   useEffect(() => {
+    paletteSwitcher();
     pullObliqueStrategy();
   }, []);
+
+
+  // There are three palettes so far in variables.scss. 
+  // Divide total num of strategies into closest integer thirds
+  // Set case for first third, second third, remaining range
+  const paletteSwitcher = (randomNum) => {
+    const paletteCount = 3;
+    const rangeLength = Math.floor(jsonLength/paletteCount);
+    const range1 = [0, rangeLength];
+    const range2 = [rangeLength + 1, Math.floor(rangeLength * 2)];
+    const range3 = [Math.floor(rangeLength * 2) + 1, jsonLength];
+    console.log('range1: ', range1, ', range2: ',range2, ', range3: ', range3);
+
+    let paletteClass = 'paletteFOOOBAR';
+    randomNum <= range1[1] ? paletteClass = 'palette1' : paletteClass;
+    range2[0] <= randomNum <= range2[1] ? paletteClass = 'palette2' : paletteClass;
+    range3[0] <= randomNum ? paletteClass = 'palette3' : paletteClass;
+    console.log('range1[1] ',range1[1],' and range2[0] is ', range2[0]);
+    console.log('randomNum is ',randomNum,' and paletteClass is ', paletteClass);
+    setPaletteChoice(prevChoice => paletteClass);
+  }
 
 
   const pullObliqueStrategy = () => {
@@ -32,7 +55,8 @@ export default function obliqueStrategies()  {
     console.log('thisRandomStrategy: ', thisRandomStrategy );
 
     // setTimeout(() => { 
-      setMessage(prevMsg => thisRandomStrategy);
+    paletteSwitcher(randomNum);
+    setMessage(prevMsg => thisRandomStrategy);
     //}, 500);
 
   }
@@ -41,7 +65,7 @@ export default function obliqueStrategies()  {
     <>
     <h1 className="text-center">OBLIQUE STRATEGIES</h1>
     <div className="app-container mx-auto px-5 text-center">
-      <p id="theMessage" className="">{theMessage}</p>
+      <p id="theMessage" className="">{theMessage} {paletteChoice}</p>
       <button className="primary absolute bottom-10" onClick={pullObliqueStrategy}>Draw a card</button>
     </div> 
     <p className="info-credits mx-auto text-center py-3 text-sm italic">

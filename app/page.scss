@@ -2,7 +2,13 @@
 @import './app/variables';
 
 h1 {
+
   color: $text-title;
+
+  + .palette2 {
+    color: $text-title-2;
+  }
+  
   font-weight: 600;
   font-size: 6vh;
   line-height: 5vh;
@@ -31,6 +37,12 @@ h1 {
 #theMessage {
   padding: 0 10vw 15vh 10vw;
   font-size: 2.5rem;
+}
+
+// TODO: is this working correctly:
+.fadeUp {
+  opacity: 0;
+  transition: all;
 }
 
 button {
