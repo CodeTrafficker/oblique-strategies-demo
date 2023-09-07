@@ -22,7 +22,6 @@ export default function obliqueStrategies()  {
   // Run once on page load to show an initial strategy message instead 
   // of empty space. Empty array [] because React:
   useEffect(() => {
-    paletteSwitcher();
     pullObliqueStrategy();
   }, []);
 
@@ -38,12 +37,16 @@ export default function obliqueStrategies()  {
     const range3 = [Math.floor(rangeLength * 2) + 1, jsonLength];
     console.log('range1: ', range1, ', range2: ',range2, ', range3: ', range3);
 
-    let paletteClass = 'paletteFOOOBAR';
-    randomNum <= range1[1] ? paletteClass = 'palette1' : paletteClass;
-    range2[0] <= randomNum <= range2[1] ? paletteClass = 'palette2' : paletteClass;
-    range3[0] <= randomNum ? paletteClass = 'palette3' : paletteClass;
-    console.log('range1[1] ',range1[1],' and range2[0] is ', range2[0]);
+    let paletteClass = 'palette1';
+
+    // Chained ternary operator instead of long if/else fn: 
+    (randomNum <= range1[1]) ? paletteClass = 'palette1'
+    : (range2[0] <= randomNum && randomNum <= range2[1]) ? paletteClass = 'palette2'      
+    : (range3[0] <= randomNum) ? paletteClass = 'palette3'
+    : paletteClass = 'palette1';
+
     console.log('randomNum is ',randomNum,' and paletteClass is ', paletteClass);
+
     setPaletteChoice(prevChoice => paletteClass);
   }
 
