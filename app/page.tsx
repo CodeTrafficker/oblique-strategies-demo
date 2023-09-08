@@ -28,16 +28,16 @@ export default function obliqueStrategies()  {
 
   // There are three palettes so far in variables.scss. 
   // Divide total num of strategies into closest integer thirds
-  // Set case for first third, second third, remaining range
+  // Set case for first third, second third, remaining 
+  // TODO: Make this scaleable to accept any number of color sets.
   const paletteSwitcher = (randomNum) => {
     const paletteCount = 3;
     const rangeLength = Math.floor(jsonLength/paletteCount);
     const range1 = [0, rangeLength];
     const range2 = [rangeLength + 1, Math.floor(rangeLength * 2)];
     const range3 = [Math.floor(rangeLength * 2) + 1, jsonLength];
-    console.log('range1: ', range1, ', range2: ',range2, ', range3: ', range3);
-
     let paletteClass = 'palette1';
+
 
     // Chained ternary operator instead of long if/else fn: 
     (randomNum <= range1[1]) ? paletteClass = 'palette1'
@@ -45,6 +45,7 @@ export default function obliqueStrategies()  {
     : (range3[0] <= randomNum) ? paletteClass = 'palette3'
     : paletteClass = 'palette1';
 
+    console.log('range1: ', range1, ', range2: ',range2, ', range3: ', range3);
     console.log('randomNum is ',randomNum,' and paletteClass is ', paletteClass);
 
     setPaletteChoice(prevChoice => paletteClass);
