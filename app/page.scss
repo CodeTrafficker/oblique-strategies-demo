@@ -1,12 +1,15 @@
 // page.scss
 @import './app/variables';
 
+// Single transition speed for switching colors with .palette1/2/3:
+$dissolveSpeed: .55s;
+
 h1 {
   color: $text-title;
   font-weight: 600;
-  font-size: 6vh;
+  font-size: 6.25vh;
   line-height: 5vh;
-  transition: color .45s ease-out;
+  transition: color $dissolveSpeed ease-out;
 }
 
 .app-container {
@@ -14,36 +17,35 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  // background: $bg-dark;
-  @apply rounded-xl;
-  height: 85vh;
-  transition: background-color .45s ease-out;
+  border-radius: 1.35rem;
+  height: 78vh;
+  transition: background-color $dissolveSpeed ease-out;
 }
 
 .app-container, .info-credits {
   width: 85vw; 
 }
 .info-credits {
-  //color: $text-light-on-dark;
-  transition: color .45s ease-out;
+  transition: color $dissolveSpeed ease-out;
   a {
     text-decoration: underline;
   }
 }
 
 #theMessage {
-  padding: 0 10vw 15vh 10vw;
+  padding: 0 0vw 15vh 0vw;
   font-size: 2.5rem;
+  font-weight: 200;
+  line-height: 3.5rem;
 }
 
 button {
-  // background: $button-bg;
   padding: 3rem;
   font-size: 1.75rem;
   font-color: $button-text;
   align-self: center;
   @apply font-bold py-2 px-4 rounded;
-  transition: all 0.45s ease-out; // this will include background-color
+  transition: all 0.35s ease-out; // this will include background-color
   &:hover {
     // background: $button-hover;
   }
@@ -118,5 +120,8 @@ button {
   }
   .app-container, .info-credits {
     width: 80vw; 
+  }
+  #theMessage {
+    padding: 0 10vw 15vh 10vw;
   }
 }

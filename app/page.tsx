@@ -71,7 +71,7 @@ export default function obliqueStrategies()  {
       <p className="info-credits mx-auto text-center py-3 text-sm italic">
         Read more about the history of Brian Eno's Oblique Strategies card deck here: <a href="https://en.wikipedia.org/wiki/Oblique_Strategies">wikipedia.org/wiki/Oblique_Strategies</a>
         <br />
-        Github repo <a href="https://github.com/CodeTrafficker/oblique-strategies-demo">here</a>.
+        Github repo and readme file for this demo <a href="https://github.com/CodeTrafficker/oblique-strategies-demo">here</a>.
       </p>
     </div>
   );
