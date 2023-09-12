@@ -1,13 +1,12 @@
 # React demo of Oblique Strategies, musician Brian Eno's card deck for driving creative decisions.
 
-You can learn more about the history of this brainstorming tool  
-[here](https://en.wikipedia.org/wiki/Oblique_Strategies).
+You can learn more about the history of this brainstorming tool [here](https://en.wikipedia.org/wiki/Oblique_Strategies).
 
 For the purposes of this demo it provides a long list of text strings to pick randomly, similar to shuffling the deck and drawing the top card.
 
 ## On the web
 (TODO) You can view a working demo here on Surge.sh -- 
-### [XXXXXXXXX-TBA-SURGESH](TBAxSURGExSH)
+### [https://codetrafficker-obliquestrategies.surge.sh/](https://codetrafficker-obliquestrategies.surge.sh/)
 
 You can view the Github repo here: 
 ### [oblique-strategies-demo](https://github.com/CodeTrafficker/oblique-strategies-demo)
@@ -58,4 +57,5 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Credits
 2023 - Phil Lollar at [LinkedIn](https://www.linkedin.com/in/phillollar/) and [Github](https://github.com/CodeTrafficker/)
+Awesome static html/js/css hosting service [Surge](https://surge.sh/)
 

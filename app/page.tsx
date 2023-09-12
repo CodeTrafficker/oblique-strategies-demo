@@ -9,15 +9,15 @@ import './page.scss';
 // 114 strategies total, but get length() for versality's sake
 
 // Can go into global functions file if expanding later:
-const randomizer = (max) => {
+const randomizer = (max: number) => {
   return Math.floor(Math.random() * (max) )
 }
 
 export default function ObliqueStrategies()  {
-  const [theMessage, setMessage] = useState();
+  const [theMessage, setMessage] = useState('');
   const strategiesJSON = require('../data/data.json');
   const jsonLength = strategiesJSON.length;
-  const [paletteChoice, setPaletteChoice] = useState();
+  const [paletteChoice, setPaletteChoice] = useState('');
 
   // Run once on page load to show an initial strategy message instead 
   // of empty space. Empty array [] because React:
@@ -30,14 +30,13 @@ export default function ObliqueStrategies()  {
   // Divide total num of strategies into closest integer thirds
   // Set case for first third, second third, remaining 
   // TODO: Make this scaleable to accept any number of color sets.
-  const paletteSwitcher = (randomNum) => {
+  const paletteSwitcher = (randomNum: number) => {
     const paletteCount = 3;
     const rangeLength = Math.floor(jsonLength/paletteCount);
     const range1 = [0, rangeLength];
     const range2 = [rangeLength + 1, Math.floor(rangeLength * 2)];
     const range3 = [Math.floor(rangeLength * 2) + 1, jsonLength];
     let paletteClass = 'palette1';
-
 
     // Chained ternary operator instead of long if/else fn
     // (TODO: but is this fair to other devs): 
@@ -70,7 +69,7 @@ export default function ObliqueStrategies()  {
         <button className="primary absolute bottom-10" onClick={pullObliqueStrategy}>Draw a card</button>
       </div> 
       <p className="info-credits mx-auto text-center py-3 text-sm italic">
-        Read more about the history of Brian Eno's Oblique Strategies card deck here: <a href="https://en.wikipedia.org/wiki/Oblique_Strategies">wikipedia.org/wiki/Oblique_Strategies</a>
+        Read more about the history of Brian Eno&apos;s Oblique Strategies card deck here: <a href="https://en.wikipedia.org/wiki/Oblique_Strategies">wikipedia.org/wiki/Oblique_Strategies</a>
         <br />
         Github repo and readme file for this demo <a href="https://github.com/CodeTrafficker/oblique-strategies-demo">here</a>.
       </p>
