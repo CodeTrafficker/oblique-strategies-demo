@@ -13,7 +13,7 @@ const randomizer = (max) => {
   return Math.floor(Math.random() * (max) )
 }
 
-export default function obliqueStrategies()  {
+export default function ObliqueStrategies()  {
   const [theMessage, setMessage] = useState();
   const strategiesJSON = require('../data/data.json');
   const jsonLength = strategiesJSON.length;
@@ -39,7 +39,8 @@ export default function obliqueStrategies()  {
     let paletteClass = 'palette1';
 
 
-    // Chained ternary operator instead of long if/else fn: 
+    // Chained ternary operator instead of long if/else fn
+    // (TODO: but is this fair to other devs): 
     (randomNum <= range1[1]) ? paletteClass = 'palette1'
     : (range2[0] <= randomNum && randomNum <= range2[1]) ? paletteClass = 'palette2'      
     : (range3[0] <= randomNum) ? paletteClass = 'palette3'
@@ -50,7 +51,6 @@ export default function obliqueStrategies()  {
 
     setPaletteChoice(prevChoice => paletteClass);
   }
-
 
   const pullObliqueStrategy = () => {
     let randomNum = randomizer( jsonLength );
