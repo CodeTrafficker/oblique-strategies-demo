@@ -20,7 +20,7 @@ Tailwind, for basic column control and a few default styles
 
 
 ## Outline
-[b]page.tsx[/b] file uses the useState hook to start with one random phrase, and then refresh it with a new, randomly selected one on button click. In accord with modern-day ES6/TypeScript conventions, The file utilizes arrow functions, consts, and a nested ternary block.
+page.tsx file uses the useState hook to start with one random phrase, and then refresh it with a new, randomly selected one on button click. In accord with modern-day ES6/TypeScript conventions, The file utilizes arrow functions, consts, and a nested ternary block.
 
 The useEffect hook is merely to run the main pullObliqueStrategy() function on first page load, otherwise there is no initial strategy displayed.
 
@@ -57,5 +57,5 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Credits
-Phil Lollar at [LinkedIn](https://www.linkedin.com/in/phillollar/) and [Github](https://github.com/CodeTrafficker/) 2023
+2023 - Phil Lollar at [LinkedIn](https://www.linkedin.com/in/phillollar/) and [Github](https://github.com/CodeTrafficker/)
 
