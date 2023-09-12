@@ -39,16 +39,19 @@ h1 {
   line-height: 3.5rem;
 }
 
-button {
+button.primary {
   padding: 3rem;
   font-size: 1.75rem;
-  font-color: $button-text;
   align-self: center;
   @apply font-bold py-2 px-4 rounded;
   transition: all 0.35s ease-out; // this will include background-color
   &:hover {
     // background: $button-hover;
   }
+}
+
+#theMessage, button.primary  {
+  color: #ffffff;
 }
 
 
