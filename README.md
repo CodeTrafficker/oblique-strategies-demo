@@ -1,4 +1,4 @@
-## React demo of Oblique Strategies, musician Brian Eno's card deck for driving creative decisions.
+# React demo of Oblique Strategies, musician Brian Eno's card deck for driving creative decisions.
 
 You can learn more about the history of this brainstorming tool  
 [here](https://en.wikipedia.org/wiki/Oblique_Strategies).
@@ -7,20 +7,20 @@ For the purposes of this demo it provides a long list of text strings to pick ra
 
 ## On the web
 (TODO) You can view a working demo here on Surge.sh -- 
-# [XXXXXXXXX-TBA-SURGESH](TBAxSURGExSH)
+### [XXXXXXXXX-TBA-SURGESH](TBAxSURGExSH)
 
 You can view the Github repo here: 
-# [oblique-strategies-demo](https://github.com/CodeTrafficker/oblique-strategies-demo)
+### [oblique-strategies-demo](https://github.com/CodeTrafficker/oblique-strategies-demo)
 
 
 ## Tech stack
-React 
+ReactJS 
 Next.js, for transpiling typescript and scss into flat js and css files ready for deployment
 Tailwind, for basic column control and a few default styles
 
 
 ## Outline
-#page.tsx# file uses the useState hook to start with one random phrase, and then refresh it with a new, randomly selected one on button click. In accord with modern-day ES6/TypeScript conventions, The file utilizes arrow functions, consts, and a nested ternary block.
+[b]page.tsx[/b] file uses the useState hook to start with one random phrase, and then refresh it with a new, randomly selected one on button click. In accord with modern-day ES6/TypeScript conventions, The file utilizes arrow functions, consts, and a nested ternary block.
 
 The useEffect hook is merely to run the main pullObliqueStrategy() function on first page load, otherwise there is no initial strategy displayed.
 
