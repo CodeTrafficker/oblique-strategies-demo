@@ -13,8 +13,8 @@ You can view the Github repo here:
 
 
 ## Tech stack
-ReactJS 
-Next.js
+ReactJS<br />
+Next.js<br />
 Tailwind
 
 
