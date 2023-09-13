@@ -14,8 +14,8 @@ You can view the Github repo here:
 
 ## Tech stack
 ReactJS 
-Next.js, for transpiling typescript and scss into flat js and css files ready for deployment
-Tailwind, for basic column control and a few default styles
+Next.js
+Tailwind
 
 
 ## Outline
