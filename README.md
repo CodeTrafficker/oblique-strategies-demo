@@ -58,5 +58,5 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## Credits
 2023 - Phil Lollar at [LinkedIn](https://www.linkedin.com/in/phillollar/) and [Github](https://github.com/CodeTrafficker/) 
 
-Awesome static html/js/css hosting service [Surge](https://surge.sh/)
+[Surge](https://surge.sh/) for providing their awesome static html/js/css hosting service.
 
