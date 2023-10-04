@@ -5,7 +5,7 @@ You can learn more about the history of this brainstorming tool [here](https://e
 For the purposes of this demo it provides a long list of text strings to pick randomly, similar to shuffling the deck and drawing the top card.
 
 ## On the web
-(TODO) You can view a working demo here on Surge.sh -- 
+You can view a working demo here on Surge.sh -- 
 ### [https://codetrafficker-obliquestrategies.surge.sh/](https://codetrafficker-obliquestrategies.surge.sh/)
 
 You can view the Github repo here: 
